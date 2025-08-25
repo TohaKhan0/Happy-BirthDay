@@ -1,0 +1,84 @@
+ body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 1000px;
+      background-image: url("bg.jpeg");
+      background-position: center center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .paper {
+      background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+      background-size: 500px;
+      background-position: center center;
+      padding: 300px 100px;
+      transform: rotateZ(-5deg);
+      box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+      position: absolute;
+    }
+
+    .paper.heart {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      padding: 0;
+      border-radius: 50%;
+    }
+
+    .paper.image {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .paper.image p {
+      font-size: 30px;
+      margin-top: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;  /* ছবিটা চ্যাপ্টা হবে না */
+      max-width: 400px;  /* ডেক্সটপে সাইজ সীমাবদ্ধ */
+      user-select: none;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .paper.heart::after {
+      content: "";
+      background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: 150px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+    }
+
+    p {
+      font-family: 'Zeyada', cursive;
+      font-size: 50px;
+      color: rgb(0,0,100);
+      opacity: 0.75;
+      user-select: none;
+    }
+
+    /* 📱 Mobile view er jonno */
+    @media (max-width: 600px) {
+      img {
+        max-width: 300px;  /* মোবাইলে ইমেজ একটু বড় দেখাবে */
+      }
+      .paper.image p {
+        font-size: 22px;  /* মোবাইলে টেক্সট ছোট */
+      }
+      p {
+        font-size: 36px;  /* মোবাইলে বড় টেক্সট কিছুটা ছোট */
+      }
+    }
